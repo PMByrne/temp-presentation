@@ -17,7 +17,7 @@ require('coffee-script');
 require('coffee-script/register');
 require('../app');
 ```
-- Talk about what the #! is doing
+- ##### Talk about what the #! is doing
 - `npm install --save express jade cookie-parser body-parser monsanto-velocity-node`
 - `atom app.coffee`
 ``` coffee-script
@@ -39,7 +39,7 @@ require('../app');
 
   velocity.listen(app, 3000)
 ```
-- Introduce the Velocity Node module
+- ##### Introduce the Velocity Node module
 - `mkdir routes`
 - `atom routes/services.coffee`
 ``` coffee-script
@@ -67,6 +67,7 @@ require('../app');
 - Try and make a change and show that nothing happens
 - Introduce supervisor
   - `npm install supervisor -g`
+- Talk about using npm as a maven, sbt, or ant replacement
 - Add some scripts to package.json
 ``` json
   "scripts": {
@@ -127,7 +128,6 @@ require('../app');
   gutil = require 'gulp-util'
   sourcemaps = require 'gulp-sourcemaps'
   supervisor = require 'gulp-supervisor'
-  require 'coffee-script/register'
   gulp.task 'coffee', ->
     gulp.src ["./ui/**/*.coffee"]
     .pipe sourcemaps.init()
@@ -166,12 +166,12 @@ require('../app');
   }
 ```
 - Run the application again
-- `gulp`
+- `npm start`
 
 ### Webpack time
-- talk about the strugles of mainatining large number of libraries in the CDN
-- talk about how there are a lot of really cool modules written for NodeJS that would be great in a UI, but we cannot use them because there isnt a good way to load them (either as globals or as AMD modules)
-- introduce webpack as a tool to bridge the two module systems and allow them both to play together in the broswer environment
+- ##### talk about the strugles of mainatining large number of libraries in the CDN
+- ##### talk about how there are a lot of really cool modules written for NodeJS that would be great in a UI, but we cannot use them because there isnt a good way to load them (either as globals or as AMD modules)
+- ##### introduce webpack as a tool to bridge the two module systems and allow them both to play together in the broswer environment
 - `npm install -g webpack`
 - `npm install --save-dev webpack coffee-loader`
 - `atom webpack.config.js`
