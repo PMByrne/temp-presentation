@@ -268,3 +268,16 @@ webpack = require('webpack');
   "test": "mocha --compilers coffee:coffee-script/register --recursive --colors --reporter list test",
   "test:dev": "mocha --compilers coffee:coffee-script/register --recursive --colors --watch --reporter nyan test",
 ```
+- `npm test` to run tests once
+- `npm run test:dev` run tests continuously
+
+# One more thing
+- `npm install monsanto-velocity-node-generator -g`
+- `cd ~/projects/personal`
+- `velocity-gen`
+- Provide requested info
+  - demo
+  - git@gitlab.monsanto.com:PMBYRN/july_14_2015_demo.git
+- `cd demo`
+- `npm run start:dev`
+- http://localhost:3000/demo
