@@ -91,7 +91,6 @@ require('../app');
   velocity.addPage app,
       appBaseUrl: "#{appBaseUrl}"
       title: 'Velocity Demo'
-      templatePath: path.resolve __dirname, './views/page.jade'
       stylesheets: [
           'style.css'
       ]
@@ -120,7 +119,7 @@ require('../app');
 
 ### Time to introduce Gulp
 - `npm install -g gulp`
-- `npm install --save-dev gulp gulp-coffee gulp-less gulp-sourcemaps gulp-util gulp-supervisor monsanto-velocity-gulp-tools`
+- `npm install --save-dev gulp gulp-coffee gulp-less gulp-sourcemaps gulp-util gulp-supervisor monsanto-velocity-gulp-tools gulp-uglify`
 - `atom gulpfile.coffee`
 ``` coffee-script
   gulp = require 'gulp'
@@ -154,6 +153,7 @@ require('../app');
   gulp.task 'coffee', gulpTools.coffee()
   gulp.task 'less', gulpTools.less()
   gulp.task 'supervise', gulpTools.supervisor()
+  gulp.task 'build', ['coffee', 'less']
   gulp.task 'watch', ['build'], ->
     gulpTools.watch 'less', 'less'
     gulpTools.watch 'coffee', 'coffee'
